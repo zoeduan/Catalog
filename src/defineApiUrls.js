@@ -1,34 +1,55 @@
 /**
- * Defines API URLs based on the selected platform (GitHub, note: GitLab and Codeberg support under development).
- * This allows the rest of the codebase to use these constants when making API calls,
- * abstracting away platform-specific URL structures.
- * 
- * Usage: import { getPlatformApiUrls } from './defineApiUrls.js';
- * 
- * Input: platform and organizationName (e.g., 'github' and 'imageomics'), defined from config.yaml and passed to this function.
- * Output: platformApiUrls[platform] = { org: ORG_API_URL, repo: REPO_API_URL }
+ * Defines API URLs based on the selected platform.
+ *
+ * This version is updated for a personal GitHub account, such as:
+ * https://github.com/zoeduan
+ *
+ * Usage:
+ * import { getPlatformApiUrls } from './defineApiUrls.js';
+ *
+ * Input:
+ * platform: "github"
+ * organizationName: GitHub username, for example "zoeduan"
+ *
+ * Output:
+ * platformApiUrls[platform] = {
+ *   org: USER_REPOS_API_URL,
+ *   repo: REPO_API_URL
+ * }
  */
 
 /**
- * Utility function to get the platform-specific API URLs for organization repos and individual repo details.
- * @param {string} platform - 'github', pending: 'gitlab', or 'codeberg'
- * @param {string} organizationName - The name of the organization (used in URL construction)
- * @returns {object} An object containing ORG_API_URL and REPO_API_URL
+ * Utility function to get the platform-specific API URLs.
+ *
+ * For GitHub personal accounts, we use:
+ * https://api.github.com/users/{username}/repos
+ *
+ * @param {string} platform - "github", pending: "gitlab" or "codeberg"
+ * @param {string} organizationName - GitHub username, for example "zoeduan"
+ * @returns {object} An object containing org and repo API URLs
  */
 export function getPlatformApiUrls(platform, organizationName) {
     const platformApiUrls = {
         github: {
-            org: `https://api.github.com/orgs/${organizationName}/repos?type=public&per_page=100`,
+            // Personal GitHub account repositories
+            org: `https://api.github.com/users/${organizationName}/repos?type=owner&per_page=100`,
+
+            // Individual repository details
             repo: "https://api.github.com/repos/"
         },
+
+        // GitLab support is under development
         // gitlab: {
-        //     org: `https://gitlab.com/api/v4/groups/${organizationName}/projects?per_page=100`,
+        //     org: `https://gitlab.com/api/v4/users/${organizationName}/projects?per_page=100`,
         //     repo: "https://gitlab.com/api/v4/projects/"
         // },
+
+        // Codeberg support is under development
         // codeberg: {
-        //     org: `https://codeberg.org/api/v1/orgs/${organizationName}/repos?limit=50`,
+        //     org: `https://codeberg.org/api/v1/users/${organizationName}/repos?limit=50`,
         //     repo: "https://codeberg.org/api/v1/repos/"
         // }
     };
+
     return platformApiUrls[platform.toLowerCase()];
 }
