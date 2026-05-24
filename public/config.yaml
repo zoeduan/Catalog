@@ -1,58 +1,91 @@
-# Configuration file for Catalog Template
-# Customize these values to personalize the catalog for your organization
-
 # Organization & Repository Settings
-ORGANIZATION_NAME: imageomics       # GitHub/Hugging Face organization name (lowercase for API calls)
-ORG_NAME: Imageomics                 # Display name for GitHub organization (can differ from API name)
-CATALOG_REPO_NAME: catalog          # Repository name for the catalog itself (used for stats badge)
+ORGANIZATION_NAME: zoeduan
+ORG_NAME: Zoe Duan
+CATALOG_REPO_NAME: catalog
 
 # Branding
-CATALOG_TITLE: Imageomics Catalog
-CATALOG_DESCRIPTION: "Explore and discover public code, datasets, models, and spaces."
-LOGO_URL: "https://github.com/Imageomics/Imageomics-guide/raw/3478acc0068a87a5604069d04a29bdb0795c2045/docs/logos/Imageomics_logo_butterfly.png"
-FAVICON_URL: "https://github.com/Imageomics/Imageomics-guide/raw/3478acc0068a87a5604069d04a29bdb0795c2045/docs/logos/Imageomics_logo_butterfly.png"
+CATALOG_TITLE: Zoe Catalog
+CATALOG_DESCRIPTION: "Explore and discover my public code, datasets, models, and demos."
+LOGO_URL: "https://avatars.githubusercontent.com/u/30881036?v=4&size=64"
+FAVICON_URL: ""
 
-# Colors (CSS custom properties)
+# Colors
 COLORS:
-  primary: "#92991c"      # Primary brand color (Imageomics Green)
-  secondary: "#5d8095"    # Secondary brand color (Imageomics Blue)
-  accent: "#0097b2"       # Accent color (Dark Teal)
-  accentDark: "#4fd1eb"   # Dark mode accent color (Light Cyan)
-  tag: "#9bcb5e"          # Tag background color (Light Green)
+  primary: "#92991c"
+  secondary: "#5d8095"
+  accent: "#0097b2"
+  accentDark: "#4fd1eb"
+  tag: "#9bcb5e"
 
 # API & Behavior Settings
-# Codebase platform for API calls and link generation. Supported values: "github", pending: "codeberg" or "gitlab".
 PLATFORM: github
-# Dataset, model, and space (demo) default: Hugging Face, other platforms would require a custom module
 API_BASE_URL: "https://huggingface.co/api/"
-# Define "new" repository criteria
 REFRESH_INTERVAL_DAYS: 30
 
-# Array of "owner/repo" strings to include in addition to non-forked org repos.
-# Use this for forked repos within the org and repos outside the org entirely.
-ADDITIONAL_REPOS:
-  - "Imageomics/Fish-Vista"
-  - "Imageomics/phylonn"
-  - "Imageomics/telemetry-dashboard"
-  - "Imageomics/docker-workshop"
-  - "Imageomics/saev-fish-dev"
-  - "jennamk14/autonomous_drone_simulator"
-  - "ixlab/vidformer"
-  - "ixlab/vega-video"
-  - "yoohj0416/predictbeetle"
+# Extra GitHub repos to include
+ADDITIONAL_REPOS: []
 
-# Array of Hugging Face repos from outside the org to include.
-# Each entry must specify "repo" (owner/name) and "type" (datasets, models, or spaces).
-# ADDITIONAL_HF_REPOS:
-#   - repo: "user/dataset-name"
-#     type: "datasets"
-#   - repo: "user/model-name"
-#     type: "models"
-#   - repo: "user/space-name"
-#     type: "spaces"
-ADDITIONAL_HF_REPOS:
-  - repo: "yoohj0416/predictbeetle"
-    type: "models"
+# Extra Hugging Face repos to include
+ADDITIONAL_HF_REPOS: []
 
 # Typography
-FONT_FAMILY: Inter    # Font family for the site
+FONT_FAMILY: Inter
+
+# # Configuration file for Catalog Template
+# # Customize these values to personalize the catalog for your organization
+
+# # Organization & Repository Settings
+# ORGANIZATION_NAME: Projects     # GitHub/Hugging Face organization name (lowercase for API calls)
+# ORG_NAME: Projects                 # Display name for GitHub organization (can differ from API name)
+# CATALOG_REPO_NAME: catalog          # Repository name for the catalog itself (used for stats badge)
+
+# # Branding
+# CATALOG_TITLE: Zoe Catalog
+# CATALOG_DESCRIPTION: "Explore and discover public code, datasets, models, and spaces."
+# LOGO_URL: "https://avatars.githubusercontent.com/u/30881036?v=4&size=64"
+# FAVICON_URL: ""
+
+# # Colors (CSS custom properties)
+# COLORS:
+#   primary: "#92991c"      # Primary brand color (Imageomics Green)
+#   secondary: "#5d8095"    # Secondary brand color (Imageomics Blue)
+#   accent: "#0097b2"       # Accent color (Dark Teal)
+#   accentDark: "#4fd1eb"   # Dark mode accent color (Light Cyan)
+#   tag: "#9bcb5e"          # Tag background color (Light Green)
+
+# # API & Behavior Settings
+# # Codebase platform for API calls and link generation. Supported values: "github", pending: "codeberg" or "gitlab".
+# PLATFORM: github
+# # Dataset, model, and space (demo) default: Hugging Face, other platforms would require a custom module
+# API_BASE_URL: "https://huggingface.co/api/"
+# # Define "new" repository criteria
+# REFRESH_INTERVAL_DAYS: 30
+
+# # Array of "owner/repo" strings to include in addition to non-forked org repos.
+# # Use this for forked repos within the org and repos outside the org entirely.
+# ADDITIONAL_REPOS:
+#   - "Imageomics/Fish-Vista"
+#   - "Imageomics/phylonn"
+#   - "Imageomics/telemetry-dashboard"
+#   - "Imageomics/docker-workshop"
+#   - "Imageomics/saev-fish-dev"
+#   - "jennamk14/autonomous_drone_simulator"
+#   - "ixlab/vidformer"
+#   - "ixlab/vega-video"
+#   - "yoohj0416/predictbeetle"
+
+# # Array of Hugging Face repos from outside the org to include.
+# # Each entry must specify "repo" (owner/name) and "type" (datasets, models, or spaces).
+# # ADDITIONAL_HF_REPOS:
+# #   - repo: "user/dataset-name"
+# #     type: "datasets"
+# #   - repo: "user/model-name"
+# #     type: "models"
+# #   - repo: "user/space-name"
+# #     type: "spaces"
+# ADDITIONAL_HF_REPOS:
+#   - repo: "yoohj0416/predictbeetle"
+#     type: "models"
+
+# # Typography
+# FONT_FAMILY: Inter    # Font family for the site
