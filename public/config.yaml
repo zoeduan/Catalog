@@ -23,7 +23,9 @@ API_BASE_URL: "https://huggingface.co/api/"
 REFRESH_INTERVAL_DAYS: 30
 
 # Extra GitHub repos to include
-ADDITIONAL_REPOS: []
+ADDITIONAL_REPOS:
+  - "https://github.com/Ohio-Oilfield-Brine-Project/ohio-brine-form15-extraction"
+  - "https://github.com/OSU-JusticeTech/agreed-entry-extract"
 
 # Extra Hugging Face repos to include
 ADDITIONAL_HF_REPOS: []
