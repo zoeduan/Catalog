@@ -3,13 +3,18 @@
 
 # Organization & Repository Settings
 ORGANIZATION_NAME: zoeduan
+
 ORG_NAME: Zoe Duan
+
 CATALOG_REPO_NAME: Catalog
 
 # Branding
 CATALOG_TITLE: Zoe Catalog
+
 CATALOG_DESCRIPTION: "Explore and discover my public code, datasets, models, and demos."
+
 LOGO_URL: "https://avatars.githubusercontent.com/u/30881036?v=4&size=64"
+
 FAVICON_URL: ""
 
 # Colors
